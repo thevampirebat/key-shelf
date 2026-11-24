@@ -1,0 +1,53 @@
+{
+  "manifest_version": 2,
+  "name": "Key Shelf \u2013 Price Watch",
+  "version": "0.1.10",
+  "description": "Compare game editions and seller offers across five key stores, with price-drop and lowest-offer stock alerts.",
+  "permissions": [
+    "storage",
+    "alarms",
+    "notifications",
+    "downloads",
+    "https://*.eneba.com/*",
+    "https://gameseal.com/*",
+    "https://*.gameseal.com/*",
+    "https://*.gamivo.com/*",
+    "https://*.loaded.com/*",
+    "https://*.instant-gaming.com/*"
+  ],
+  "background": {
+    "scripts": [
+      "schedule.js",
+      "core.js",
+      "background.js"
+    ],
+    "persistent": true
+  },
+  "browser_action": {
+    "default_title": "Key Shelf",
+    "default_popup": "popup.html",
+    "default_icon": "icon.png"
+  },
+  "icons": {
+    "48": "icon.png",
+    "96": "icon.png"
+  },
+  "options_ui": {
+    "page": "dashboard.html",
+    "open_in_tab": true
+  },
+  "browser_specific_settings": {
+    "gecko": {
+      "id": "{80dc6f1f-5b54-40dd-816b-171ee4f15ac3}",
+      "strict_min_version": "140.0",
+      "data_collection_permissions": {
+        "required": [
+          "searchTerms",
+          "websiteContent"
+        ]
+      }
+    }
+  },
+  "content_security_policy": "script-src 'self'; object-src 'none'",
+  "incognito": "not_allowed"
+}

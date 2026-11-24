@@ -1,0 +1,12 @@
+{
+  "name": "key-shelf-price-watch",
+  "version": "0.1.10",
+  "private": true,
+  "license": "MIT",
+  "scripts": {
+    "test": "node --test tests/*.test.cjs"
+  },
+  "devDependencies": {
+    "linkedom": "0.18.13"
+  }
+}
